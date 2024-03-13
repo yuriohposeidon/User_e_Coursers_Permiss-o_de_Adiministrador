@@ -1,0 +1,22 @@
+@bearer_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inlnb3JAbWFpbC5jb20iLCJhZG1pbiI6ZmFsc2UsImlhdCI6MTY5Mjk4MDMzMiwiZXhwIjoxNjkyOTgzOTMyLCJzdWIiOiIzIn0.FZzslnR_gLSB4o0ygYVTFcwrfD5CjBpaMLzWWrswz7g"
+
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "Ygor",
+    "email": "ygor@mail.com",
+    "password": "123456"
+}
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "ygor@mail.com",
+    "password": "123456"
+}
+###
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inlnb3JAbWFpbC5jb20iLCJhZG1pbiI6ZmFsc2UsImlhdCI6MTY5Mjk4MDMzMiwiZXhwIjoxNjkyOTgzOTMyLCJzdWIiOiIzIn0.FZzslnR_gLSB4o0ygYVTFcwrfD5CjBpaMLzWWrswz7g
